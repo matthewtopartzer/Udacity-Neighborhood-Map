@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Lancaster, California</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="js/source/knockout-3.4.1.js"></script>
+      <script type="text/javascript" src="js/source/gmaps.js.sql"></script>
+      <script src="js/index.js"></script>
+      <script type="text/javascript">
+         map = new GMaps ({div: '#map',
+               lat: 34.6883708,
+               lng: -118.1204984,
+               zoom: 11
+  });
+</script>
+      <style>
+      @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {}
+
+      html,
+      body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        height: 100%;
+        width: 25%;
+      }
+
+      input {
+        font-size: 12px;
+      }
+
+      h1 {
+        color: #FFFFFF;
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+
+      #hide-listings,
+      #show-listings {
+        width: 48%;
+      }
+
+            #pano {
+        width: 200px;
+        height: 200px;
+      }
+
+      #map {
+        bottom:0px;
+        height: 100%;
+        left: 25%;
+        position: absolute;
+        right: 0px;
+      }
+
+      .options-box {
+        background: #000000;
+        border: 1px solid #999;
+        height: 100%;
+        line-height: 35px;
+        padding: 10px 10px 30px 10px;
+        text-align: left;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="options-box">
+        <h1>Lancaster, California</h1>
+        <div>
+          <input id="show-listings" type="button" value="Show Listings">
+          <input id="hide-listings" type="button" value="Hide Listings">
+          <div class="places">
+            <div>
+          <a href="javascript:triggerClick(0)">Winco Foods</a>
+           </div>
+           <div>
+          <a href="javascript:triggerClick(1)">Lancaster Library</a>
+           </div>
+           <div>
+          <a href="javascript:triggerClick(2)">In And Out</a>
+           <div>
+          <a href="javascript:triggerClick(3)">AV Prison (For Bad People</a>
+           </div>
+           <div>
+          <a href="javascript:triggerClick(4)">Antelope Valley College</a>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div id="map">Error reading map</div>
+    </div>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDllmwdyUUZAMmNKawIAB7zgF9_ogbvuv0&v=3&callback=initMap">
+    </script>
+  </body>
+</html>
